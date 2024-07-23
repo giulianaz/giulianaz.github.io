@@ -9,19 +9,24 @@ body {
     background-color: #EBF4F6; /* Color de fondo que combina bien con el azul oscuro */
 }
 
+@font-face {
+    font-family: 'Nav';
+    src: url('../font/RedHatDisplay-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #071952; /* Azul oscuro */
-    padding: 40px 50px; /* Incrementar el padding para hacer el navbar más grande */
+    background-color: rgb(17, 17, 30); /* Azul oscuro */
+    padding: 0px 50px; /* Incrementar el padding para hacer el navbar más grande */
 }
 
-.navbar .logo a {
-    color: white;
-    font-size: 24px; /* Ajustar el tamaño de la fuente */
-    font-weight: bold; /* Hacer el texto más grueso para que se vea profesional */
-    text-decoration: none; /* Quitar el subrayado */
+.navbar .logo img {
+    height: 120px; /* Ajustar el tamaño de la imagen del logo */
+    width: auto;  /* Mantener la proporción de la imagen */
 }
 
 .nav-links {
@@ -38,6 +43,8 @@ body {
     color: white;
     padding: 12px 24px; /* Incrementar el padding para hacer los enlaces más grandes */
     transition: background-color 0.3s ease;
+    font-family: 'Nav', sans-serif;
+    font-size: 20px;
 }
 
 .nav-links a:hover {
@@ -88,7 +95,7 @@ h1 {
     margin: 10px 0;
     margin-top: 40px;
     margin-bottom: 20px;
-    color: #173dba; /* Cambiar color del título a azul oscuro */
+    color: rgb(49, 115, 146); /* Cambiar color del título a azul oscuro */
 }
 
 .card p {
@@ -98,7 +105,7 @@ h1 {
 }
 
 .footer {
-    background-color: #071952; /* Mismo color que el navbar */
+    background-color: rgb(17, 17, 30); /* Mismo color que el navbar */
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -116,6 +123,7 @@ h1 {
 }
 
 .footer-copyright {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 15px;
+    margin-bottom: 20px;
 }

@@ -9,19 +9,24 @@ body {
     background-color: #EBF4F6; /* Color de fondo que combina bien con el azul oscuro */
 }
 
+@font-face {
+    font-family: 'Nav';
+    src: url('../font/RedHatDisplay-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #071952; /* Azul oscuro */
-    padding: 40px 50px; /* Incrementar el padding para hacer el navbar más grande */
+    background-color: rgb(17, 17, 30); /* Azul oscuro */
+    padding: 0px 50px; /* Incrementar el padding para hacer el navbar más grande */
 }
 
-.navbar .logo a {
-    color: white;
-    font-size: 24px; /* Ajustar el tamaño de la fuente */
-    font-weight: bold; /* Hacer el texto más grueso para que se vea profesional */
-    text-decoration: none; /* Quitar el subrayado */
+.navbar .logo img {
+    height: 120px; /* Ajustar el tamaño de la imagen del logo */
+    width: auto;  /* Mantener la proporción de la imagen */
 }
 
 .nav-links {
@@ -38,6 +43,8 @@ body {
     color: white;
     padding: 12px 24px; /* Incrementar el padding para hacer los enlaces más grandes */
     transition: background-color 0.3s ease;
+    font-family: 'Nav', sans-serif;
+    font-size: 20px;
 }
 
 .nav-links a:hover {
@@ -45,20 +52,33 @@ body {
     border-radius: 4px;
 }
 
+@font-face {
+    font-family: 'Hero';
+    src: url('../font/RedHatDisplay-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HeroDesc';
+    src: url('../font/RedHatDisplay-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .hero-section {
     display: flex;
     align-items: center;
     padding: 40px;
-    padding-left: 200px;
-    gap: 100px;
-    background-color: #12276a; /* Azul oscuro */
+    padding-left: 250px;
+    gap: 200px;
+    background-color: rgb(49, 115, 146); /* Azul oscuro */
 }
 
 .hero-image {
     max-width: 45%;
     height: auto;
-    border-radius: 2px;
-    margin-right: 20px; /* Mover la imagen un poco más a la izquierda */
+    border-radius: 20px;
+    margin-right: -4px; /* Mover la imagen un poco más a la izquierda */
     margin-top: -20px; /* Ajustar el margen superior si es necesario */
 }
 
@@ -68,9 +88,24 @@ body {
     color: #EBF4F6; /* Asegurarse de que el texto sea blanco para contrastar con el fondo azul */
 }
 
+.hero-align {
+    display: flex;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: flex-start; /* Alinear los elementos desde el mismo punto */
+}
+
 .hero-text .tit {
-    font-size: 95px;
+    font-size: 83px;
+    margin: 0;
+    font-family: 'Hero', sans-serif;
+    line-height: 1;
+}
+
+.hero-text .desc{
+    font-size: 30px;
     margin-bottom: 20px;
+    font-family: 'HeroDesc', sans-serif;
+    margin-top: 8px;
 }
 
 .hero-text h5 {
@@ -130,7 +165,7 @@ body {
 
 
 .footer {
-    background-color: #071952; /* Mismo color que el navbar */
+    background-color: rgb(17, 17, 30); /* Mismo color que el navbar */
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -148,15 +183,16 @@ body {
 }
 
 .footer-copyright {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 15px;
+    margin-bottom: 20px;
 }
 
 .blue-block {
-    background-color: #12276a; /* Color azul oscuro */
+    background-color: rgb(49, 115, 146); /* Color azul oscuro */
     color: white;
     text-align: center;
-    padding: 80px 400px;
+    padding: 80px 356px;
     margin: 0 auto; /* Centrado horizontal */
     max-width: 90%; /* Ancho máximo del bloque */
     border-radius: 8px;
@@ -170,6 +206,10 @@ body {
 }
 
 .blue-block p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.6;
+}
+
+.image-block .horario {
+    border-radius: 8px;
 }

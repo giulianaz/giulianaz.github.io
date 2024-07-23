@@ -9,19 +9,24 @@ body {
     background-color: #EBF4F6;
 }
 
+@font-face {
+    font-family: 'Nav';
+    src: url('../font/RedHatDisplay-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #071952;
-    padding: 40px 50px;
+    background-color: rgb(17, 17, 30); /* Azul oscuro */
+    padding: 0px 50px; /* Incrementar el padding para hacer el navbar más grande */
 }
 
-.navbar .logo a {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
+.navbar .logo img {
+    height: 120px; /* Ajustar el tamaño de la imagen del logo */
+    width: auto;  /* Mantener la proporción de la imagen */
 }
 
 .nav-links {
@@ -30,20 +35,23 @@ body {
 }
 
 .nav-links li {
-    margin-left: 30px;
+    margin-left: 30px; /* Incrementar el espacio entre los elementos del menú */
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
-    padding: 12px 24px;
+    padding: 12px 24px; /* Incrementar el padding para hacer los enlaces más grandes */
     transition: background-color 0.3s ease;
+    font-family: 'Nav', sans-serif;
+    font-size: 20px;
 }
 
 .nav-links a:hover {
     background-color: #575757;
     border-radius: 4px;
 }
+
 
 .content {
     padding: 20px;
@@ -63,16 +71,28 @@ body {
 .contact-left {
     flex: 1;
     margin-top: 100px;
+    background-color: rgb(17, 17, 30);
+    margin-left: 300px;
+    margin-right: 200px;
+    margin-bottom: 350px;
+    border-radius: 8px;
+    padding-bottom: 20px;
 }
 
 .contact-left h2{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 40px;
-    color: #071952;
+    color: #ffffff;
+    margin-top: 20px;
 }
 
 .contact-left p{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: flex-start;
+    padding-left: 80px;
 }
 
 .contact-form {
@@ -102,7 +122,7 @@ body {
 
 .contact-form form button {
     padding: 10px 20px;
-    background-color: #071952;
+    background-color: rgb(17, 17, 30);
     color: white;
     border: none;
     border-radius: 4px;
@@ -115,6 +135,7 @@ body {
 }
 
 .map {
+    margin-top: -100px;
     text-align: center;
 }
 
@@ -123,10 +144,11 @@ body {
     height: 450px;
     border: none;
     margin-top: 20px;
+    border-radius: 8px;
 }
 
 .footer {
-    background-color: #071952; /* Mismo color que el navbar */
+    background-color: rgb(17, 17, 30); /* Mismo color que el navbar */
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -144,6 +166,7 @@ body {
 }
 
 .footer-copyright {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 15px;
+    margin-bottom: 20px;
 }
