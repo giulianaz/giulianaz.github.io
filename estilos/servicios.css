@@ -7,6 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #EBF4F6; /* Color de fondo que combina bien con el azul oscuro */
+    overflow-x: hidden; /* Prevenir el desplazamiento horizontal */
 }
 
 @font-face {
@@ -29,22 +30,30 @@ body {
     width: auto;  /* Mantener la proporción de la imagen */
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 .nav-links li {
-    margin-left: 30px; /* Incrementar el espacio entre los elementos del menú */
+    margin-left: 20px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
-    padding: 12px 24px; /* Incrementar el padding para hacer los enlaces más grandes */
+    padding: 10px 15px;
     transition: background-color 0.3s ease;
     font-family: 'Nav', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .nav-links a:hover {
@@ -126,4 +135,65 @@ h1 {
     margin-top: 20px;
     font-size: 15px;
     margin-bottom: 20px;
+}
+
+/* Media Queries */
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Ocultamos el menú por defecto */
+        position: absolute; /* Posicionamos el menú fuera del flujo normal */
+        top: 60px; /* Ajusta según el alto de tu navbar */
+        left: 0; /* Alinea el menú al borde izquierdo */
+        background-color: rgb(17, 17, 30); /* Fondo del menú desplegado */
+        border-bottom: 2px solid #575757; /* Opcional: Línea de separación */
+        z-index: 1000; /* Asegura que el menú esté por encima del contenido */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center; /* Centra el texto en los ítems del menú */
+    }
+
+    .nav-links a {
+        width: 100%;
+        display: block; /* Asegura que los enlaces ocupen todo el ancho del contenedor */
+        padding: 15px 0; /* Añade algo de espacio arriba y abajo */
+    }
+
+    .navbar.active .nav-links {
+        display: flex; /* Mostramos el menú cuando se activa */
+    }
+
+    .cards-container {
+        flex-direction: column; /* Apilar las tarjetas verticalmente */
+        padding: 20px;
+    }
+
+    .card {
+        max-width: 100%; /* Asegura que las tarjetas ocupen todo el ancho disponible */
+        margin-top: 20px; /* Añadir espacio arriba de cada tarjeta */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .card img {
+        height: auto;
+    }
+
+    .footer-content {
+        font-size: 16px;
+    }
 }

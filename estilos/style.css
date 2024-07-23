@@ -22,12 +22,11 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(17, 17, 30); /* Azul oscuro */
-    padding: 10px 20px;
-    position: relative; /* Asegura que el menú toggle se posicione correctamente */
+    padding: 0px 50px; /* Incrementar el padding para hacer el navbar más grande */
 }
 
 .navbar .logo img {
-    height: 80px; /* Ajustar el tamaño de la imagen del logo */
+    height: 120px; /* Ajustar el tamaño de la imagen del logo */
     width: auto;  /* Mantener la proporción de la imagen */
 }
 
