@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educación del Paciente - Mundo sin Limites</title>
+    <title>Educación del Paciente</title>
     <link rel="stylesheet" href="estilos/educacion.css">
 </head>
 <body>
@@ -13,6 +13,7 @@
                 <img src="img/logo.jpg" alt="Logo">
             </a>
         </div>
+        <div class="menu-toggle" onclick="toggleMenu();">☰</div>
         <ul class="nav-links">
             <li><a href="/">Inicio</a></li>
             <li><a href="/servicios">Servicios</a></li>
@@ -29,11 +30,11 @@
                 <h2>¿Cuál es su procedimiento con pacientes nuevos?</h2>
                 <p>En nuestro centro de kinesiología, comenzamos con una evaluación completa de tu historial médico y tus necesidades específicas. Luego diseñamos un plan de tratamiento personalizado que puede incluir sesiones de rehabilitación y ejercicios terapéuticos adaptados a tus objetivos de salud.</p>
             </div>
-            <div class="card2">
+            <div class="card">
                 <h2>¿Necesito que me derive un médico?</h2>
                 <p>No es necesario tener una derivación médica para comenzar el tratamiento de kinesiología con nosotros. Nuestros profesionales están capacitados para evaluar y tratar una amplia gama de condiciones musculoesqueléticas y de movimiento.</p>
             </div>
-            <div class="card3">
+            <div class="card">
                 <h2>¿Qué tan frecuente necesito una sesión de kinesiología?</h2>
                 <p>La frecuencia de las sesiones de kinesiología puede variar según tu condición y los objetivos del tratamiento. En general, recomendamos sesiones regulares al principio para maximizar los beneficios del tratamiento, luego ajustamos la frecuencia según tu progreso y necesidades.</p>
             </div>
@@ -49,5 +50,10 @@
             <p>©2023 por Mundo sin límites.</p>
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.navbar').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
