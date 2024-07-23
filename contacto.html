@@ -13,6 +13,7 @@
                 <img src="img/logo.jpg" alt="Logo">
             </a>
         </div>
+        <div class="menu-toggle" onclick="toggleMenu();">☰</div>
         <ul class="nav-links">
             <li><a href="/">Inicio</a></li>
             <li><a href="/servicios">Servicios</a></li>
@@ -49,7 +50,7 @@
                     <label for="mensaje">Mensaje</label>
                     <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
-                    <button type="button">Enviar</button>
+                    <button type="submit">Enviar</button>
                 </form>
             </div>
         </div>
@@ -68,5 +69,10 @@
             <p>©2023 por Mundo sin límites.</p>
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.navbar').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

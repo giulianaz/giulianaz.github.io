@@ -7,6 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #EBF4F6;
+    overflow-x: hidden; /* Prevenir el desplazamiento horizontal */
 }
 
 @font-face {
@@ -29,29 +30,36 @@ body {
     width: auto;  /* Mantener la proporción de la imagen */
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 .nav-links li {
-    margin-left: 30px; /* Incrementar el espacio entre los elementos del menú */
+    margin-left: 20px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
-    padding: 12px 24px; /* Incrementar el padding para hacer los enlaces más grandes */
+    padding: 10px 15px;
     transition: background-color 0.3s ease;
     font-family: 'Nav', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .nav-links a:hover {
     background-color: #575757;
     border-radius: 4px;
 }
-
 
 .content {
     padding: 20px;
@@ -65,47 +73,43 @@ body {
 .contact-info {
     display: flex;
     gap: 20px;
+    justify-content: center;
     margin-top: 40px;
 }
 
 .contact-left {
-    flex: 1;
-    margin-top: 100px;
+    width: 100%;
+    max-width: 550px;
     background-color: rgb(17, 17, 30);
-    margin-left: 300px;
-    margin-right: 200px;
-    margin-bottom: 350px;
     border-radius: 8px;
-    padding-bottom: 20px;
+    padding: 20px;
+    margin-bottom: 400px;
+    margin-right: 300px;
+    margin-left: 250px;
+    margin-top: 100px;
 }
 
-.contact-left h2{
+.contact-left h2 {
     margin-bottom: 30px;
     font-size: 40px;
     color: #ffffff;
-    margin-top: 20px;
 }
 
-.contact-left p{
+.contact-left p {
     margin-bottom: 10px;
     color: #ffffff;
-    display: flex;
-    flex-direction: column; /* Alinear elementos verticalmente */
-    align-items: flex-start;
-    padding-left: 80px;
+    text-align: left; /* Texto alineado a la izquierda */
+    padding-left: 100px;
 }
 
 .contact-form {
-    flex: 1;
-    max-width: 400px;
-    margin-left: 400px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .contact-form form {
     display: grid;
     gap: 10px;
-    margin-left: -400px;
-    margin-right: 300px;
 }
 
 .contact-form form label {
@@ -135,7 +139,7 @@ body {
 }
 
 .map {
-    margin-top: -100px;
+    margin-top: -180px;
     text-align: center;
 }
 
@@ -143,7 +147,6 @@ body {
     width: 100%;
     height: 450px;
     border: none;
-    margin-top: 20px;
     border-radius: 8px;
 }
 
@@ -169,4 +172,70 @@ body {
     margin-top: 20px;
     font-size: 15px;
     margin-bottom: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Ocultamos el menú por defecto */
+        position: absolute; /* Posicionamos el menú fuera del flujo normal */
+        top: 60px; /* Ajusta según el alto de tu navbar */
+        left: 0; /* Alinea el menú al borde izquierdo */
+        background-color: rgb(17, 17, 30); /* Fondo del menú desplegado */
+        border-bottom: 2px solid #575757; /* Opcional: Línea de separación */
+        z-index: 1000; /* Asegura que el menú esté por encima del contenido */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center; /* Centra el texto en los ítems del menú */
+    }
+
+    .nav-links a {
+        width: 100%;
+        display: block; /* Asegura que los enlaces ocupen todo el ancho del contenedor */
+        padding: 15px 0; /* Añade algo de espacio arriba y abajo */
+    }
+
+    .navbar.active .nav-links {
+        display: flex; /* Mostramos el menú cuando se activa */
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left,
+    .contact-form {
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .map {
+        margin-top: 0px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .footer-content {
+        font-size: 16px;
+    }
 }
